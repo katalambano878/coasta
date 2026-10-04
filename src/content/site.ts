@@ -3,6 +3,12 @@
  * Design/layout stays in components; swap branding here when ready.
  */
 
+export const homeHero = {
+  title: "Nourishing people with wholesome food",
+  subtitle:
+    "World-leading fresh produce, grown with care and delivered with flavour.",
+};
+
 export const siteMeta = {
   name: "Costa Group",
   tagline:
