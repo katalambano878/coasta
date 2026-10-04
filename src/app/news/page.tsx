@@ -87,6 +87,9 @@ function sanitizeHref(href: string | null | undefined) {
 }
 
 async function getNewsCards() {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return fallbackNewsCards;
+  }
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("news_posts")

@@ -59,6 +59,13 @@ function buildFooter(rows: NavRow[]) {
 }
 
 export async function GET() {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return NextResponse.json({
+      mainNav,
+      footerBottomLinks: footerLegal.bottomLinks,
+      footerCols: footerNav,
+    });
+  }
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("navigation_links")

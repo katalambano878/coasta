@@ -77,6 +77,9 @@ export function getJobSlug(job: PublicJob) {
 }
 
 export async function getCurrentJobs() {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return fallbackJobs;
+  }
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("jobs")
