@@ -1430,7 +1430,7 @@ export const footerLegal = {
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms and Conditions", href: "/terms" },
   ],
-  copyright: "© 2026 Costa. All rights reserved",
+  copyright: "© 2026 Costa. All rights reserved ABN:27133 266459",
 };
 
 /** Hero background slides (replace with video when ready). Local + remote OK. */
