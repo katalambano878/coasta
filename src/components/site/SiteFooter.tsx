@@ -155,6 +155,12 @@ export function SiteFooter() {
             ))}
           </div>
           <p className="text-center text-[0.98rem] text-white/90">{footerLegal.copyright}</p>
+          <p className="mt-1 text-center text-[0.98rem] text-white/90">
+            Powered by{" "}
+            <a href="https://doctorbarns.com" target="_blank" rel="noopener" className="text-white/90 hover:underline">
+              Doctor Barns Tech
+            </a>
+          </p>
         </div>
       </div>
 
@@ -268,7 +274,12 @@ export function SiteFooter() {
         {/* Bottom Bar */}
         <hr className="mb-2 mt-7 border-t border-white/45" />
         <div className="flex flex-col items-center justify-between gap-2 text-[0.72rem] text-white/90 md:flex-row">
-          <p>{footerLegal.copyright}</p>
+          <p>
+            {footerLegal.copyright} · Powered by{" "}
+            <a href="https://doctorbarns.com" target="_blank" rel="noopener" className="text-white/90 hover:underline">
+              Doctor Barns Tech
+            </a>
+          </p>
           <div className="flex gap-10">
             {bottomLinks.map((l) => (
               <Link key={l.href} href={l.href} className="hover:text-white">
